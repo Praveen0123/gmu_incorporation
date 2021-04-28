@@ -1,0 +1,37 @@
+<section class="grid-y grid-margin-y">
+
+  <!-- HEADER: What They Do -->
+  <div class="cell">
+    <gmu-section-header [title]="'Occupation Hotspots'"></gmu-section-header>
+  </div>
+
+
+  <!-- Occupaion Hot Spot Description -->
+  <div class="cell">
+    {{hotSpotDescription}}
+  </div>
+
+
+  <!-- HOTSPOT MAP -->
+  <div class="cell">
+    <vp-map-occupation-hotspots [hotSpotsList]="occupationProfileDetails.hotspotList"></vp-map-occupation-hotspots>
+  </div>
+
+
+  <!-- HOTSPOTS DETAILS -->
+  <div class="cell">
+
+    <section class="grid-x bold">
+      <div class="cell xsmall-4"> Area </div>
+      <div class="cell xsmall-4"> Salary </div>
+    </section>
+
+    <section class="grid-x"
+             *ngFor="let hotspot of occupationProfileDetails.hotspotList">
+      <div class="cell xsmall-4"> {{hotspot.city}}, {{hotspot.stateAbbreviation}} </div>
+      <div class="cell xsmall-4"> {{hotspot.salary | salarySuffix}} </div>
+    </section>
+
+  </div>
+
+</section>

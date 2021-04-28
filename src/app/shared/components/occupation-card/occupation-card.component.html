@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-content>
+
+
+    <section class="grid-x card-wrapper">
+
+      <!-- IMAGE -->
+      <div class="cell align-self-top">
+        <!-- IMAGE -->
+        <div class="occupation-image-container"
+             [style.background]="'url(' + imageUrl + ')'">
+
+          <!-- THE OVERLAY TO MAKE THE IMAGE DARKER -->
+          <div class="image-overlay"></div>
+
+          <!-- TITLE -->
+          <div class="title-container">
+            <div class="occupation-title"
+                 [matTooltip]="occupation.title">
+              {{occupation.title}}</div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- SALARY/GROWTH -->
+      <div class="cell align-self-bottom">
+
+        <!-- SALARY AND GROWTH -->
+        <section class="grid-x grid-padding-x align-center-middle text-center">
+
+          <div class="cell auto vertical-line">
+            <b>{{ salary | salarySuffix }}</b>
+            <div>/ year</div>
+          </div>
+          <div class="cell auto">
+            <b> {{occupation.projectedGrowthRate}}</b>
+            <div>growth</div>
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+
+  </mat-card-content>
+</mat-card>

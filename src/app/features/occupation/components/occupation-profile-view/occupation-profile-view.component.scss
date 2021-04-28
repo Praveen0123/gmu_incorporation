@@ -1,0 +1,41 @@
+@import 'common';
+
+:host {
+  display      : block;
+  border       : solid rem-calc(1) $color-primary;
+  border-radius: rem-calc(4);
+  margin       : 0 auto;
+  max-width    : 450px;
+}
+
+.occupationHeading {
+  background-color: $color-primary;
+  color           : $white;
+  margin          : 0;
+  padding         : rem-calc(4) rem-calc(10);
+}
+
+.check-mark-container {
+  background-color: $header-background;
+  padding-top     : rem-calc(10);
+  padding-bottom  : rem-calc(10);
+
+  .grid-x {
+    height: 100%;
+  }
+}
+
+.icon-check-mark {
+  height: rem-calc(64);
+  width : rem-calc(93);
+}
+
+.heading {
+  font-weight: bold;
+}
+
+.messaging {
+  display    : inline-block;
+  font-size  : rem-calc(12);
+  line-height: 1.2;
+}

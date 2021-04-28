@@ -1,0 +1,61 @@
+<section class="grid-y">
+
+  <!-- OCCUPAION NAME -->
+  <div class="cell">
+    <h2 class="occupationHeading">
+      {{occupationProfileDetails.title}}
+    </h2>
+  </div>
+
+
+  <!-- OCCUPATION PROFILE -->
+  <div class="cell">
+
+    <section class="grid-x grid-padding-x">
+
+      <!-- CHECK MARK -->
+      <div class="cell auto check-mark-container">
+
+        <section class="grid-x">
+
+          <div class="cell align-self-middle text-center">
+            <mat-icon class="icon-check-mark"
+                      [svgIcon]="'icon-check-mark'"></mat-icon>
+          </div>
+
+          <div class="cell align-self-bottom">
+            <span class="messaging">Your Selection aligns with the following</span>
+            <span class="messaging heading"> ADVANCE program : </span>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- PROFILE DETAILS -->
+      <div class="cell auto align-self-middle">
+
+        <section class="grid-y">
+          <div class="cell">
+            <span class="messaging heading"> Area of Study : </span>
+            <!-- <span class="messaging"> {{occupationProfileDetails.areaOfStudy}} </span> -->
+          </div>
+
+          <div class="cell">
+            <span class="messaging heading"> MASON Degree : </span>
+            <!-- <span class="messaging"> {{occupationProfileDetails.masonDegree}} </span> -->
+          </div>
+
+          <div class="cell">
+            <span class="messaging heading"> NOVA Degree : </span>
+            <!-- <span class="messaging"> {{occupationProfileDetails.novaDegree}} </span> -->
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</section>

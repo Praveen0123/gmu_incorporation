@@ -1,0 +1,60 @@
+@import "common";
+@import "~@angular/material/theming";
+
+:host {
+  display: block;
+  height : 100%;
+}
+
+.site-container {
+  // border       : solid 1px deeppink;
+  margin       : 0 auto;
+  padding-right: rem-calc(8);
+  padding-left : rem-calc(8);
+
+  @include breakpoint(480) {
+    // border       : solid 1px limegreen;
+    padding-right: unset;
+    padding-left : unset;
+    max-width    : rem-calc(480);
+  }
+
+  @include breakpoint(small) {
+    // border   : solid 1px dodgerblue;
+    max-width: rem-calc(600);
+  }
+
+  @include breakpoint(medium) {
+    // border   : solid 1px orange;
+    max-width: initial;
+  }
+}
+
+.page-container {
+  min-height : 55vh;
+  padding-top: rem-calc(23);
+}
+
+gmu-connect-with-coach {
+  margin-top: rem-calc(33);
+}
+
+.md-grid-container {
+  @include breakpoint(medium) {
+    padding-left : 0;
+    padding-right: 0;
+    @include mat-elevation-transition;
+    @include mat-elevation(2);
+  }
+}
+
+.loading {
+  color      : white;
+  font-size  : rem-calc(20);
+  line-height: 1.5;
+  padding-top: 50px;
+
+  @include breakpoint(medium) {
+    font-size: rem-calc(28);
+  }
+}

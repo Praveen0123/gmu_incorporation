@@ -1,0 +1,22 @@
+<section class="grid-y">
+
+  <!-- HEADER: Average Salaries -->
+  <div class="cell">
+    <gmu-section-header [title]="'Average Salaries'"></gmu-section-header>
+  </div>
+
+
+  <!-- Average Salaries Description -->
+  <div class="cell">
+    {{averageSalariesDescription}}
+  </div>
+
+  <!-- Average Salaries Map -->
+  <div class="cell">
+    <vp-map-occupation-average-salaries [nationalSalaryList]="nationalSalaryList"
+                                        [stateSalaryList]="stateSalaryList"
+                                        [mapTitle]="mapTitle"
+                                        (onStateSelected)="onStateSelected($event)"></vp-map-occupation-average-salaries>
+  </div>
+
+</section>
